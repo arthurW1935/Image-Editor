@@ -16,14 +16,11 @@
 
 }
 .button {
-    /*-fx-background-color: rgb(10,10,10); !* Green *!*/
     -fx-border-color: rgb(200,200,200);
     -fx-border-width: 1;
     -fx-color: white;
     -fx-text-fill: skyblue;
-    /*-fx-padding: 15px 32px;*/
     -fx-alignment: center;
-    /*-fx-text-align: center !important;*/
     -fx-text-decoration: none;
     -fx-display: inline-block;
     -fx-font-size: 15px;
@@ -33,7 +30,6 @@
 }
 
 #buttonPane{
-    /*-fx-content-display: flex;*/
     -fx-alignment: center;
     -fx-background-color: rgb(0,0,0);
 }
@@ -46,7 +42,6 @@
 
 
 #toolbar{
-    /*-fx-padding: 10px;*/
     -fx-background-color: rgb(25,25,25);
     -fx-padding: 30px;
 }
