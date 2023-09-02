@@ -1,4 +1,5 @@
 package com.editorimage.imageedtior;
+
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -24,7 +25,7 @@ public class Application extends javafx.application.Application {
         Image image = new Image(thisImage.toURI().toString());
         double height = image.getHeight();
         double width = image.getWidth();
-        if(height > 800 || width > 1200){
+        if(height > 700 || width > 1000){
             double ratio = height/width;
             if(height > 700){
                 height = 700;
@@ -242,7 +243,7 @@ public class Application extends javafx.application.Application {
         pixel_blur.setId("pixel_blur");
         pixel_blur.setMaxWidth(Double.MAX_VALUE);
 
-        Slider sliderPixelBlur = new Slider(0,100,1);
+        Slider sliderPixelBlur = new Slider(1,100,1);
         Button applyPixelBlur = new Button("Apply Pixel Blurr");
         applyPixelBlur.setMaxWidth(Double.MAX_VALUE);
         applyPixelBlur.setOnAction(event -> pixelBlur(sliderPixelBlur.getValue()));
