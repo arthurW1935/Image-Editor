@@ -99,8 +99,8 @@ public class ImageEditor {
         return newImage;
     }
 
-    // function to blurr the image
-    public static BufferedImage blurr(BufferedImage image,int value){
+    // function to blur the image
+    public static BufferedImage blur(BufferedImage image,int value){
         int width = image.getWidth();
         int height = image.getHeight();
 
@@ -110,7 +110,7 @@ public class ImageEditor {
         // averaging values for the size (height-height%value)*(width-width%value) 
         for(int row=0; row<height-(height%value); row+=value){
             for(int column=0; column<width-(width%value); column+=value){
-                float color_avg [] = new float[3];
+                float[] color_avg = new float[3];
 
                 // implementing average pooling for each pool
                 for(int row_pool=row; row_pool<row+value; row_pool++){
@@ -183,7 +183,7 @@ public class ImageEditor {
             avg_array[(height/value)][(width/value)] = newPixel.getRGB();
         }
 
-        // creating a new image with the averaged values to blurr the image
+        // creating a new image with the averaged values to blur the image
         BufferedImage newImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
         for(int row=0; row<height; row++){
             for(int column=0; column<width; column++){

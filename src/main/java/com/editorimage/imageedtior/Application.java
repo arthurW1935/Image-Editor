@@ -93,11 +93,11 @@ public class Application extends javafx.application.Application {
             showImage();
         }
         catch (IOException e){
-            System.out.println("Image is not opening");
+            System.out.println("There seems to be a problem loading the image");
         }
     }
 
-    public void horizontalFLip(){
+    public void horizontalFlip(){
         try {
             ImageEditor imageEditor = new ImageEditor();
             File outputImg = new File("src\\main\\resources\\com\\editorimage\\imageedtior\\output.jpg");
@@ -172,7 +172,7 @@ public class Application extends javafx.application.Application {
             ImageEditor imageEditor = new ImageEditor();
             File outputImg = new File("src\\main\\resources\\com\\editorimage\\imageedtior\\output.jpg");
             BufferedImage outputBufferedImage = ImageIO.read(outputImg);
-            BufferedImage processedImage = imageEditor.blurr(outputBufferedImage, (int) value);
+            BufferedImage processedImage = imageEditor.blur(outputBufferedImage, (int) value);
             ImageIO.write(processedImage, "jpg", outputImg);
             showImage();
         }
@@ -216,7 +216,7 @@ public class Application extends javafx.application.Application {
 
         Button flipHorizontal = new Button("Horizontal Flip");
         flipHorizontal.setMaxWidth(Double.MAX_VALUE);
-        flipHorizontal.setOnAction(event -> horizontalFLip());
+        flipHorizontal.setOnAction(event -> horizontalFlip());
 
         Button flipVertical = new Button("Vertical Flip");
         flipVertical.setMaxWidth(Double.MAX_VALUE);
